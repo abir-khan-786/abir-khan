@@ -1,20 +1,28 @@
+'use client'
+
 import Image from 'next/image'
 import React from 'react'
+import { Typewriter } from 'react-simple-typewriter'
 
 const Hero = () => {
   return (
     <div className=" container m-auto">
-      <div className="flex justify-between items-center    ">
-        <div className="  w-1/2  ">
-          <h1 className="text-3xl">Hi </h1>
-          <h1 className="text-4xl font-bold ">Abir Khan</h1>
-          <h4 className="my-4 ">I&apos;m Web developer</h4>
-          <h2 className="   ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            cupiditate incidunt amet, quibusdam corrupti fugiat debitis minima
-            maiores porro officia ratione eveniet error esse commodi itaque?
-            Provident accusantium ipsum necessitatibus?
-          </h2>
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 items-center   ">
+        <div className=" ">
+          <h1 className="text-3xl">
+            {' '}
+            Hello <span className="   animate-pulse   ">👋</span>
+          </h1>
+          <h1 className="text-6xl font-bold ">Abir Khan</h1>
+          <Typewriter
+            words={['Full Stack Developer', 'MERN Stack Developer']}
+            loop={0}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
         </div>
 
         <div className="   ">

@@ -6,8 +6,11 @@ import {
   FaReact,
   FaNode,
   FaNodeJs,
+  FaVuejs,
+  FaAngular,
+  FaSass,
 } from 'react-icons/fa6'
-import { SiMongodb } from 'react-icons/si'
+import { SiMongodb, SiTypescript, SiTypst } from 'react-icons/si'
 
 const MySkill = () => {
   const skills = [
@@ -53,6 +56,30 @@ const MySkill = () => {
       icon: <SiMongodb />,
       color: 'green',
     },
+    {
+      name: 'typescript',
+      percentage: 90,
+      icon: <SiTypescript />,
+      color: 'green',
+    },
+    {
+      name: 'Vue JS',
+      percentage: 90,
+      icon: <FaVuejs />,
+      color: 'green',
+    },
+    {
+      name: 'Angular',
+      percentage: 90,
+      icon: <FaAngular />,
+      color: 'green',
+    },
+    {
+      name: 'Sass',
+      percentage: 90,
+      icon: <FaSass />,
+      color: 'green',
+    },
   ]
 
   return (
@@ -62,11 +89,16 @@ const MySkill = () => {
         {' '}
         Technologies I’ve been working with recently
       </h2>
-      <div className="  grid grid-cols-6 gap-4  justify-center">
+      <div className="  grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4  justify-center">
         {skills.map((skill, index) => (
-          <div key={index} className={`  cursor-pointer hover:text-green-500`}>
-            <div className=" text-6xl">{skill.icon}</div>
-            <div className=" text-xl">{skill.name}</div>
+          <div
+            key={index}
+            className={`   justify-center  items-center gap-4 flex cursor-pointer hover:text-green-500`}
+          >
+            <div className=" text-4xl">{skill.icon}</div>
+            <div>
+              <h1 className={'text-xs'}>{skill.name}</h1>
+            </div>
           </div>
         ))}
       </div>

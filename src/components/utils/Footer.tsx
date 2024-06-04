@@ -4,8 +4,8 @@ import { FaGithubAlt, FaLinkedinIn } from 'react-icons/fa6'
 const Footer = () => {
   return (
     <section className=" container m-auto">
-      <div className=" grid grid-cols-6 gap-4">
-        <div className="  col-span-3   ml-4  ">Abir Khan</div>
+      <div className=" grid  grid-cols-5  gap-4">
+        <div className="   col-span-2     ml-4  ">Abir Khan</div>
         <div>01752103786</div>
         <div>abirk2day@gmail.com</div>
         <div className=" flex  justify-evenly">
@@ -17,18 +17,13 @@ const Footer = () => {
       <div className="mb-4 flex justify-evenly">
         <div>
           <ul className=" flex gap-3">
-            <li>home</li>
-            <li>home</li>
-            <li>home</li>
-            <li>home</li>
-            <li>home</li>
-            <li>home</li>
-            <li>home</li>
-            <li>home</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Projects</li>
           </ul>
         </div>
         <div>
-          <h2>Designed and built by Pavan MG with Love & Coffee</h2>
+          <h2>Designed and Develop by Abir Khan</h2>
         </div>
       </div>
     </section>

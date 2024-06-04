@@ -1,5 +1,7 @@
+'use client'
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { FaLink } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa6'
 
@@ -10,6 +12,7 @@ const Projects = () => {
     description: string
     tech: string[]
     image: string
+    item: string
     live: string
     github: string
   }
@@ -25,6 +28,7 @@ const Projects = () => {
         'https://img.freepik.com/free-vector/construction-landing-page_23-2148181047.jpg?t=st=1715319403~exp=1715323003~hmac=42b8aa0a773e7b2d13b7e1bf9b15b5f8dfb22c0ab5a453908c836011592ed5c0&w=826',
       live: 'https://github.com',
       github: 'https://github.com',
+      item: 'App Development',
     },
     {
       id: 2,
@@ -48,6 +52,7 @@ const Projects = () => {
 
       live: 'https://github.com',
       github: 'https://github.com',
+      item: 'Web development',
     },
     {
       id: 3,
@@ -60,6 +65,7 @@ const Projects = () => {
         'https://img.freepik.com/free-vector/construction-landing-page_23-2148181047.jpg?t=st=1715319403~exp=1715323003~hmac=42b8aa0a773e7b2d13b7e1bf9b15b5f8dfb22c0ab5a453908c836011592ed5c0&w=826',
       live: 'https://github.com',
       github: 'https://github.com',
+      item: 'Web development',
     },
     {
       id: 4,
@@ -84,45 +90,62 @@ const Projects = () => {
         'https://img.freepik.com/free-vector/construction-landing-page_23-2148181047.jpg?t=st=1715319403~exp=1715323003~hmac=42b8aa0a773e7b2d13b7e1bf9b15b5f8dfb22c0ab5a453908c836011592ed5c0&w=826',
       live: 'https://github.com',
       github: 'https://github.com',
+      item: 'Web development',
     },
   ]
+
+  const [filter, setFilter] = useState('All')
+
+  const filterProjects = (item: string) => {
+    setFilter(item)
+  }
+
+  const filteredProjects = projects.filter(
+    (project) => project.item === filter || filter === 'All'
+  )
 
   return (
     <section className=" container m-auto">
       <h2 className=" text-3xl text-center my-4 capitalize">
-        Things I’ve built so far
+        Things I&apos; ve built so far
       </h2>
 
       <div>
-        <ul className=" menu menu-vertical lg:menu-horizontal   rounded-box">
+        <ul className=" menu menu-vertical lg:menu-horizontal flex-row   rounded-box   ">
           <li className="">
             <a
-              href="#"
-              className="btn btn-ghost bg-purple-700 hover:bg-purple-500  mr-2"
+              className={`btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
+                filter === 'All' ? 'bg-green-400' : ''
+              }`}
+              onClick={() => filterProjects('All')}
             >
               All
             </a>
           </li>
           <li>
             <a
-              href="#"
-              className="btn btn-ghost border    hover:bg-purple-500  border-pink-400 mr-2"
+              className={`btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
+                filter === 'App Development' ? 'bg-green-400' : ''
+              }`}
+              onClick={() => filterProjects('App Development')}
             >
               App Development
             </a>
           </li>
           <li>
             <a
-              href="#"
-              className=" btn btn-ghost border    hover:bg-purple-500  border-pink-400 mr-2"
+              className={`btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
+                filter === 'Web development' ? 'bg-green-400' : ''
+              }`}
+              onClick={() => filterProjects('Web development')}
             >
               Web development
             </a>
           </li>
         </ul>
       </div>
-      <div className=" grid grid-cols-3 my-4  gap-5">
-        {projects.map((project: Project) => (
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-4  gap-5">
+        {filteredProjects.map((project: Project) => (
           <div
             key={project.id}
             className=" card      rounded-md  hover:shadow-xl  cursor-pointer   "
@@ -143,7 +166,7 @@ const Projects = () => {
               <div>
                 <p>{project.description.slice(0, 85)}.......</p>
                 <p className=" text-black font-semibold my-2">Tools</p>
-                <div className="  grid  grid-cols-4  gap-4">
+                <div className="  grid  grid-cols-3 md:grid-cols-4  gap-4">
                   {project.tech.map((t) => (
                     <div
                       key={t}
