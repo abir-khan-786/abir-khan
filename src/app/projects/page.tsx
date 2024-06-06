@@ -3,7 +3,7 @@ import React from 'react'
 
 const ProjectsPage = () => {
   return (
-    <div>
+    <div className="  scroll-smooth">
       <Projects />
     </div>
   )

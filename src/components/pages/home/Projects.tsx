@@ -105,97 +105,100 @@ const Projects = () => {
   )
 
   return (
-    <section className=" container m-auto">
-      <h2 className=" text-3xl text-center my-4 capitalize">
-        Things I&apos; ve built so far
-      </h2>
+    <div className=" projets-background text-white">
+      <section className=" container m-auto scroll-smooth       ">
+        <h2 className="   font-bold text-4xl text-center my-8 capitalize">
+          My Recent Projects
+        </h2>
 
-      <div>
-        <ul className=" menu menu-vertical lg:menu-horizontal flex-row   rounded-box   ">
-          <li className="">
-            <a
-              className={`btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
-                filter === 'All' ? 'bg-green-400' : ''
-              }`}
-              onClick={() => filterProjects('All')}
+        <div>
+          <ul className=" menu menu-vertical lg:menu-horizontal flex-row   rounded-box   ">
+            <li className="  ">
+              <a
+                className={`   btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
+                  filter === 'All' ? 'brand-btn' : ''
+                }`}
+                onClick={() => filterProjects('All')}
+              >
+                All
+              </a>
+            </li>
+            <li>
+              <a
+                className={`     btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
+                  filter === 'App Development' ? 'brand-btn' : ''
+                }`}
+                onClick={() => filterProjects('App Development')}
+              >
+                App Development
+              </a>
+            </li>
+            <li>
+              <a
+                className={`    btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
+                  filter === 'Web development' ? 'brand-btn' : ''
+                }`}
+                onClick={() => filterProjects('Web development')}
+              >
+                Web development
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-4  gap-5">
+          {filteredProjects.map((project: Project) => (
+            <div
+              key={project.id}
+              className=" card  transform    shadow-xl      hover:border    rounded-md     cursor-pointer   "
             >
-              All
-            </a>
-          </li>
-          <li>
-            <a
-              className={`btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
-                filter === 'App Development' ? 'bg-green-400' : ''
-              }`}
-              onClick={() => filterProjects('App Development')}
-            >
-              App Development
-            </a>
-          </li>
-          <li>
-            <a
-              className={`btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
-                filter === 'Web development' ? 'bg-green-400' : ''
-              }`}
-              onClick={() => filterProjects('Web development')}
-            >
-              Web development
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-4  gap-5">
-        {filteredProjects.map((project: Project) => (
-          <div
-            key={project.id}
-            className=" card      rounded-md  hover:shadow-xl  cursor-pointer   "
-          >
-            <div className=" card-body  ">
-              <div className="  h-72  flex justify-center">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  height={500}
-                  width={500}
-                  className=" shadow-md rounded-lg"
-                />
-              </div>
-              <div className=" card-title">
-                <h2 className="  ">{project.name}</h2>
-              </div>
-              <div>
-                <p>{project.description.slice(0, 85)}.......</p>
-                <p className=" text-black font-semibold my-2">Tools</p>
-                <div className="  grid  grid-cols-3 md:grid-cols-4  gap-4">
-                  {project.tech.map((t) => (
-                    <div
-                      key={t}
-                      className="  border  border-violet-700  w-20  text-center rounded-md"
-                    >
-                      {t}
-                    </div>
-                  ))}
+              <div className=" card-body   ">
+                <div className="   h-60 flex justify-center">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    height={500}
+                    width={500}
+                    className=" shadow-md rounded-lg"
+                  />
+                </div>
+                <div className=" card-title">
+                  <h2 className="  ">{project.name}</h2>
+                </div>
+                <div>
+                  <p>{project.description.slice(0, 85)}.......</p>
+                  <p className=" text-black font-semibold my-2">Tools</p>
+                  <div className="  grid  grid-cols-3 md:grid-cols-4  gap-4  ">
+                    {project.tech.map((t) => (
+                      <div
+                        key={t}
+                        className="  border   border-black  w-20  text-center rounded-md"
+                      >
+                        {t}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="  card-actions my-2">
+                  <ul className=" flex flex-row justify-between w-full   ">
+                    <li>
+                      <a href={project.github}>
+                        <FaGithub color="gray" size={20} />
+                      </a>
+                    </li>
+                    <li>
+                      <a href={project.live}>
+                        <FaLink color=" #430795" size={20} />
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="  card-actions my-2">
-                <ul className=" flex flex-row justify-between w-full ">
-                  <li>
-                    <a href={project.github}>
-                      <FaGithub color="gray" size={20} />
-                    </a>
-                  </li>
-                  <li>
-                    <a href={project.live}>
-                      <FaLink color=" #430795" size={20} />
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   )
 }
 
