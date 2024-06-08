@@ -83,8 +83,8 @@ const MySkill = () => {
   ]
 
   return (
-    <div className="  my-skill">
-      <div className="   container m-auto my-4 arrow-container -expand-arrows-animation ">
+    <div className=" myskill py-4  ">
+      <div className="   container m-auto    ">
         <h1 className=" text-center text-3xl">My Tech Stack</h1>
         <h2 className=" text-center my-4">
           {' '}
@@ -94,7 +94,7 @@ const MySkill = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className={`   justify-center  items-center gap-4 flex cursor-pointer hover:text-green-500 arrow`}
+              className={`   justify-center  items-center gap-4 flex cursor-pointer hover:text-green-500  `}
             >
               <div className=" text-4xl">{skill.icon}</div>
               <div>

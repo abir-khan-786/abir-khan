@@ -6,7 +6,7 @@ import Projects from '@/components/pages/home/Projects'
 import './index.scss'
 const MainPage = () => {
   return (
-    <main className="  scroll-smooth">
+    <main className="  scroll-smooth bg-base-200 text-white">
       <Hero />
       <MySkill />
       <Projects />

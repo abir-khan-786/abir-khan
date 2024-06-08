@@ -105,9 +105,9 @@ const Projects = () => {
   )
 
   return (
-    <div className=" projets-background text-white">
+    <div className="    relative ">
       <section className=" container m-auto scroll-smooth       ">
-        <h2 className="   font-bold text-4xl text-center my-8 capitalize">
+        <h2 className="   font-bold text-4xl text-center py-4 capitalize">
           My Recent Projects
         </h2>
 
@@ -146,7 +146,7 @@ const Projects = () => {
           </ul>
         </div>
 
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-4  gap-5">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-5">
           {filteredProjects.map((project: Project) => (
             <div
               key={project.id}
@@ -198,6 +198,14 @@ const Projects = () => {
           ))}
         </div>
       </section>
+
+      <div className="  absolute">
+        <ul className=" projects-animation  ">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </div>
   )
 }

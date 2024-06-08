@@ -38,7 +38,7 @@ const Hero = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="hero min-h-screen bg-base-200 text-white">
+    <div className="hero min-h-screen  ">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <Image
           src="https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?t=st=1715186969~exp=1715190569~hmac=bfc63fa7064c5e39981e9c33f0b4a9db11ded3562a3c5f74fccbede0d9ef3544&w=826"

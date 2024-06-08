@@ -3,7 +3,7 @@ import { FaGithubAlt, FaLinkedinIn } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
-    <section className=" bg-gray-800  bg-transparent text-white">
+    <section className="   bg-base-200 text-white   ">
       <div className=" container m-auto">
         <div className=" grid  grid-cols-5  gap-4">
           <div className="   col-span-2     ml-4  ">Abir Khan</div>
