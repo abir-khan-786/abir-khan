@@ -7,6 +7,9 @@
   background-color: #f7f7f7;
   color: #333;
 }
+.hero-image {
+  filter: brightness(1.4) drop-shadow(1rem 1rem 1rem #915103);
+}
 
 .brand-btn {
   background-image: linear-gradient(

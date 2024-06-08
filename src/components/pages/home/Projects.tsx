@@ -111,12 +111,14 @@ const Projects = () => {
           My Recent Projects
         </h2>
 
-        <div>
+        <div className=" py-4">
           <ul className=" menu menu-vertical lg:menu-horizontal flex-row   rounded-box   ">
             <li className="  ">
               <a
-                className={`   btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
-                  filter === 'All' ? 'brand-btn' : ''
+                className={`   btn btn-ghost btn-xs md:w-36      mr-2 ${
+                  filter === 'All'
+                    ? ' bg-gradient-to-tr  to-indigo-600 from-indigo-900'
+                    : ''
                 }`}
                 onClick={() => filterProjects('All')}
               >
@@ -125,8 +127,10 @@ const Projects = () => {
             </li>
             <li>
               <a
-                className={`     btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
-                  filter === 'App Development' ? 'brand-btn' : ''
+                className={`     btn btn-ghost btn-xs md:w-36    mr-2 ${
+                  filter === 'App Development'
+                    ? 'bg-gradient-to-tr  to-indigo-600 from-indigo-900'
+                    : ''
                 }`}
                 onClick={() => filterProjects('App Development')}
               >
@@ -135,8 +139,10 @@ const Projects = () => {
             </li>
             <li>
               <a
-                className={`    btn btn-ghost btn-xs md:w-36   hover:bg-green-400  border-green-400 border-2 mr-2 ${
-                  filter === 'Web development' ? 'brand-btn' : ''
+                className={`    btn btn-ghost btn-xs md:w-36     mr-2 ${
+                  filter === 'Web development'
+                    ? 'bg-gradient-to-tr  to-indigo-600 from-indigo-900'
+                    : ''
                 }`}
                 onClick={() => filterProjects('Web development')}
               >
@@ -150,7 +156,7 @@ const Projects = () => {
           {filteredProjects.map((project: Project) => (
             <div
               key={project.id}
-              className=" card  transform    shadow-xl      hover:border    rounded-md     cursor-pointer   "
+              className=" card  transform      bg-gradient-to-bl      to-indigo-900  from-sky-900  shadow-xl      hover:border    rounded-xl     cursor-pointer   "
             >
               <div className=" card-body   ">
                 <div className="   h-60 flex justify-center">
@@ -165,30 +171,17 @@ const Projects = () => {
                 <div className=" card-title">
                   <h2 className="  ">{project.name}</h2>
                 </div>
-                <div>
-                  <p>{project.description.slice(0, 85)}.......</p>
-                  <p className=" text-black font-semibold my-2">Tools</p>
-                  <div className="  grid  grid-cols-3 md:grid-cols-4  gap-4  ">
-                    {project.tech.map((t) => (
-                      <div
-                        key={t}
-                        className="  border   border-black  w-20  text-center rounded-md"
-                      >
-                        {t}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+
                 <div className="  card-actions my-2">
                   <ul className=" flex flex-row justify-between w-full   ">
                     <li>
                       <a href={project.github}>
-                        <FaGithub color="gray" size={20} />
+                        <FaGithub color="white" size={40} />
                       </a>
                     </li>
                     <li>
                       <a href={project.live}>
-                        <FaLink color=" #430795" size={20} />
+                        <FaLink color=" white" size={20} />
                       </a>
                     </li>
                   </ul>

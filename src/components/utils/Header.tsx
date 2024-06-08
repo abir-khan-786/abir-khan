@@ -1,9 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const pathname = usePathname()
+
   return (
-    <div className=" bg-black   ">
+    <div className="    bg-base-200">
       <div className="navbar  container m-auto     ">
         <div className="  ">
           <Link href="/" className="  text-xl     ">
@@ -17,24 +22,78 @@ const Header = () => {
           </Link>
         </div>
         <div className="   aria-hidden:hidden  ">
-          <ul className="menu menu-horizontal px-1    text-white  flex justify-center items-center ">
+          <ul className="menu menu-horizontal px-1  navbarEffects  text-white  flex justify-center items-center ">
             <li>
-              <Link href={'/'}>Home</Link>
+              <Link
+                className={`${
+                  pathname === '/'
+                    ? '   border-indigo-700  transform translate-y-1     delay-75   font-bold  text-yellow-600  border-b-2  mr-2          '
+                    : ''
+                }`}
+                href={'/'}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href={'/resume'}>Resume</Link>
+              <Link
+                className={`${
+                  pathname === '/resume'
+                    ? '   border-indigo-700  transform translate-y-1     delay-75   font-bold  text-yellow-600  border-b-2  mr-2        '
+                    : ''
+                }`}
+                href={'/resume'}
+              >
+                Resume
+              </Link>
             </li>
             <li>
-              <Link href={'/projects'}>Projects</Link>
+              <Link
+                className={`${
+                  pathname === '/projects'
+                    ? '   border-indigo-700  transform translate-y-1     delay-75   font-bold  text-yellow-600  border-b-2  mr-2        '
+                    : ''
+                }`}
+                href={'/projects'}
+              >
+                Projects
+              </Link>
             </li>
             <li>
-              <Link href={'/about'}>About</Link>
+              <Link
+                className={`${
+                  pathname === '/about'
+                    ? '   border-indigo-700  transform translate-y-1     delay-75   font-bold  text-yellow-600  border-b-2  mr-2        '
+                    : ''
+                }`}
+                href={'/about'}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link href={'/contact'}>Contact </Link>
+              <Link
+                className={`${
+                  pathname === '/contact'
+                    ? '   border-indigo-700  transform translate-y-1     delay-75   font-bold  text-yellow-600  border-b-2  mr-2        '
+                    : ''
+                }`}
+                href={'/contact'}
+              >
+                Contact{' '}
+              </Link>
             </li>
             <li>
-              <Link href={'/blog'}>Blog </Link>
+              <Link
+                className={`${
+                  pathname === '/blog'
+                    ? '   border-indigo-700  transform translate-y-1     delay-75   font-bold  text-yellow-600  border-b-2  mr-2        '
+                    : ''
+                }`}
+                href={'/blog'}
+              >
+                Blog{' '}
+              </Link>
             </li>
             <li>
               <a>

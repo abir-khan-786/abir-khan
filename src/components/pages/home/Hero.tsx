@@ -7,44 +7,14 @@ import { Typewriter } from 'react-simple-typewriter'
 
 const Hero = () => {
   return (
-    // <div className=" container m-auto">
-    //   <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 items-center   ">
-    //     <div className=" ">
-    //       <h1 className="text-3xl">
-    //         {' '}
-    //         Hello <span className="   animate-pulse   ">👋</span>
-    //       </h1>
-    //       <h1 className="text-6xl font-bold ">Abir Khan</h1>
-    //       <Typewriter
-    //         words={['Full Stack Developer', 'MERN Stack Developer']}
-    //         loop={0}
-    //         cursor
-    //         cursorStyle="_"
-    //         typeSpeed={70}
-    //         deleteSpeed={50}
-    //         delaySpeed={1000}
-    //       />
-    //     </div>
-
-    //     <div className="   ">
-    //       <Image
-    //         src={{
-    //           src: 'https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?t=st=1715186969~exp=1715190569~hmac=bfc63fa7064c5e39981e9c33f0b4a9db11ded3562a3c5f74fccbede0d9ef3544&w=826',
-    //           width: 606,
-    //           height: 620,
-    //         }}
-    //         alt="hero"
-    //       />
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="hero min-h-screen  ">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+    <div className="hero  ">
+      <div className="hero-content flex-col lg:flex-row-reverse  ">
         <Image
-          src="https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?t=st=1715186969~exp=1715190569~hmac=bfc63fa7064c5e39981e9c33f0b4a9db11ded3562a3c5f74fccbede0d9ef3544&w=826"
-          width={500}
-          height={500}
+          src="/abir.png"
+          width={400}
+          height={400}
           alt="abir "
+          className="  hero-image "
         />
         <div>
           <h1 className="text-5xl font-bold">
@@ -62,10 +32,10 @@ const Hero = () => {
               delaySpeed={1000}
             />
           </p>
-          <button className=" brand-btn btn  btn-ghost  border border-white   btn-sm   mr-2  ">
+          <button className=" btn  btn-ghost   bg-gradient-to-t  to-indigo-600 from-indigo-900   btn-sm   mr-2  ">
             Hire Me <FaLink />
           </button>
-          <button className=" brand-btn btn  btn-ghost  border border-white  btn-sm">
+          <button className=" brand-btn btn  btn-ghost   btn-sm">
             Download Resume <FaDownLong />{' '}
           </button>
         </div>
