@@ -1,40 +1,48 @@
 import React from 'react'
-import { FaMailBulk, FaSms } from 'react-icons/fa'
+import { FaMailBulk, FaSeedling, FaSms } from 'react-icons/fa'
 const Contacts = () => {
   return (
-    <div>
-      <div className="hero min-h-screen bg-base-200 text-white">
-        <div className="text-center  ">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100  ">
-            <form className="card-body ">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Subject</span>
-                </label>
-                <input
-                  placeholder="Enter your subject"
-                  className="input input-bordered  "
-                  required
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">What you wont</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="What you wont"
-                  className="input input-bordered h-36 w-full"
-                  required
-                />
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">
-                  Sent <FaSms />{' '}
-                </button>
-              </div>
-            </form>
+    <div className="  bg-slate-900 ">
+      <div className="text-center  py-4">
+        <h1 className="text-4xl font-bold text-white">Contact Us</h1>
+        <p className="text-white">Feel free to contact us</p>
+      </div>
+      <div className="flex justify-center items-center">
+        <div className=" form-control w-1/2">
+          <div>
+            <label htmlFor="" className=" label">
+              Enter Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              className="   input    w-full bg-white text-black"
+            />
           </div>
+          <div>
+            <label htmlFor="" className=" label">
+              Subjects
+            </label>
+            <input
+              type="text"
+              placeholder=" Subjects "
+              className=" input w-full bg-white text-black"
+            />
+          </div>
+          <div>
+            <label htmlFor="" className=" label">
+              Enter Massage
+            </label>
+            <input
+              type="text"
+              placeholder="Massage"
+              className=" input h-24 w-full  bg-white text-black"
+            />
+          </div>
+          <button className=" btn  mt-4 my-4   brand-btn border-none w-full ">
+            {' '}
+            sent <FaSeedling />
+          </button>
         </div>
       </div>
     </div>
