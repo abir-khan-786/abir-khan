@@ -2,7 +2,7 @@ import React from 'react'
 import { FaMailBulk, FaSeedling, FaSms } from 'react-icons/fa'
 const Contacts = () => {
   return (
-    <div className="  bg-slate-900  h-screen text-white  ">
+    <div className="  bg-slate-900    text-white  ">
       <div className="text-center  py-4 px-4">
         <h1 className="text-4xl font-bold text-white">Contact Us</h1>
         <p className="text-white">Feel free to contact us</p>

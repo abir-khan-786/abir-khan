@@ -109,7 +109,7 @@ const Projects = () => {
   return (
     <div className="    ">
       <section className=" container m-auto scroll-smooth       ">
-        <h2 className="   font-bold text-4xl text-center py-4 capitalize">
+        <h2 className="   font-bold text-xl md:text-3xl text-center py-4 capitalize">
           My Recent Projects
         </h2>
 

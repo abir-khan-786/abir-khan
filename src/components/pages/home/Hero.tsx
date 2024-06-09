@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="page  main-header   flex justify-center items-center  ">
-        <main className="animationcontainer   w-full flex justify-between items-center">
+        <div className="animationcontainer   w-full flex justify-between items-center">
           <div className="item   ">
             <i className="loader --2"></i>
           </div>
@@ -71,7 +71,7 @@ const Hero = () => {
           <div className="item">
             <i className="loader --7"></i>
           </div>
-        </main>
+        </div>
       </div>
     </div>
   )
