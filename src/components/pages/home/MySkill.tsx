@@ -90,16 +90,14 @@ const MySkill = () => {
           {' '}
           Technologies I’ve been working with recently
         </h2>
-        <div className="  grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4  justify-center  ">
+        <div className="  grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-4  justify-center  ">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className={`   justify-center  items-center gap-4 flex cursor-pointer  bg-gradient-to-t to-indigo-600 from-gray-900 left-green-500  `}
+              className={` btn w-full      rounded-md     gap-4  cursor-pointer  bg-gradient-to-bl     to-emerald-600  from-blue-500 left-green-500  `}
             >
-              <div className=" text-4xl">{skill.icon}</div>
-              <div>
-                <h1 className={'text-xs'}>{skill.name}</h1>
-              </div>
+              <div className=" text-xl text-white">{skill.icon}</div>
+              <div className=" text-sm md:text-xl text-white">{skill.name}</div>
             </div>
           ))}
         </div>

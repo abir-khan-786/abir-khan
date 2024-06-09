@@ -18,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} flex justify-between flex-col   min-h-screen bg-slate-900   `}
+      >
         <Header />
         {children}
         <Footer />

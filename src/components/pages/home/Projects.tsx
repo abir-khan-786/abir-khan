@@ -20,7 +20,7 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      name: 'Make Mony Service',
+      name: 'University Management System',
       description:
         ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem illum debitis fugiat eos, ad ipsam ipsa molestiae dicta. Doloribus pariatur impedit explicabo at unde similique ea ullam perferendis recusandae laudantium.',
       tech: ['React', 'Node', 'Express', 'MongoDB'],
@@ -32,7 +32,7 @@ const Projects = () => {
     },
     {
       id: 2,
-      name: 'Project 2',
+      name: ' Madico Pharmacy',
 
       description:
         ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem illum debitis fugiat eos, ad ipsam ipsa molestiae dicta. Doloribus pariatur impedit explicabo at unde similique ea ullam perferendis recusandae laudantium.',
@@ -56,7 +56,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      name: 'Project 3',
+      name: 'Top point bd',
 
       description:
         ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem illum debitis fugiat eos, ad ipsam ipsa molestiae dicta. Doloribus pariatur impedit explicabo at unde similique ea ullam perferendis recusandae laudantium.',
@@ -69,7 +69,7 @@ const Projects = () => {
     },
     {
       id: 4,
-      name: 'Project 4',
+      name: 'fashion bd',
 
       description:
         ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem illum debitis fugiat eos, ad ipsam ipsa molestiae dicta. Doloribus pariatur impedit explicabo at unde similique ea ullam perferendis recusandae laudantium.',
@@ -104,8 +104,10 @@ const Projects = () => {
     (project) => project.item === filter || filter === 'All'
   )
 
+  const active = ' bg-gradient-to-bl     to-emerald-600  from-blue-500'
+
   return (
-    <div className="    relative ">
+    <div className="    ">
       <section className=" container m-auto scroll-smooth       ">
         <h2 className="   font-bold text-4xl text-center py-4 capitalize">
           My Recent Projects
@@ -116,9 +118,7 @@ const Projects = () => {
             <li className="  ">
               <a
                 className={`   btn btn-ghost btn-xs md:w-36      mr-2 ${
-                  filter === 'All'
-                    ? ' bg-gradient-to-tr  to-indigo-600 from-indigo-900'
-                    : ''
+                  filter === 'All' ? active : ''
                 }`}
                 onClick={() => filterProjects('All')}
               >
@@ -128,9 +128,7 @@ const Projects = () => {
             <li>
               <a
                 className={`     btn btn-ghost btn-xs md:w-36    mr-2 ${
-                  filter === 'App Development'
-                    ? 'bg-gradient-to-tr  to-indigo-600 from-indigo-900'
-                    : ''
+                  filter === 'App Development' ? active : ''
                 }`}
                 onClick={() => filterProjects('App Development')}
               >
@@ -140,9 +138,7 @@ const Projects = () => {
             <li>
               <a
                 className={`    btn btn-ghost btn-xs md:w-36     mr-2 ${
-                  filter === 'Web development'
-                    ? 'bg-gradient-to-tr  to-indigo-600 from-indigo-900'
-                    : ''
+                  filter === 'Web development' ? active : ''
                 }`}
                 onClick={() => filterProjects('Web development')}
               >
@@ -156,7 +152,7 @@ const Projects = () => {
           {filteredProjects.map((project: Project) => (
             <div
               key={project.id}
-              className=" card  transform      bg-gradient-to-bl      to-indigo-900  from-sky-900  shadow-xl      hover:border    rounded-xl     cursor-pointer   "
+              className=" card  transform    bg-gradient-to-bl     to-emerald-600  from-blue-500   shadow-xl      hover:border    rounded-xl     cursor-pointer   "
             >
               <div className=" card-body   ">
                 <div className="   h-60 flex justify-center">
@@ -172,7 +168,7 @@ const Projects = () => {
                   <h2 className="  ">{project.name}</h2>
                 </div>
 
-                <div className="  card-actions my-2">
+                <div className="  card-actions  mt-4  ">
                   <ul className=" flex flex-row justify-between w-full   ">
                     <li>
                       <a href={project.github}>
@@ -191,14 +187,6 @@ const Projects = () => {
           ))}
         </div>
       </section>
-
-      <div className="  absolute">
-        <ul className=" projects-animation  ">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
     </div>
   )
 }

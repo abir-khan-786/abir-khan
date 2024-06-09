@@ -7,7 +7,7 @@ import './index.scss'
 import Contacts from './contact/page'
 const MainPage = () => {
   return (
-    <main className="  relative  scroll-smooth   bg-slate-900 text-white  ">
+    <main className="  px-4 py-4 relative  scroll-smooth   bg-slate-900 text-white  ">
       <Hero />
       <MySkill />
       <Projects />

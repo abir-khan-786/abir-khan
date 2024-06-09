@@ -4,17 +4,21 @@ import { FaGithubAlt, FaLinkedinIn } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
-    <footer className="footer bg-slate-900 border-t-2 border-gray-500 text-white">
-      <div className="my-4 container mx-auto flex justify-between items-center">
-        <div className=" text-center">
-          <p>Md Abir Khan © 2021 All rights reserved</p>
+    <footer className=" bg-slate-900  ">
+      <div className="mx-4 flex   justify-evenly items-center w-full text-white border-t-2 ">
+        <div>
+          <p> Abir khan @copyright 2024</p>
         </div>
-        <div className=" text-white flex     justify-between space-x-4">
-          <Link href="/" className="text-xl">
-            <FaLinkedinIn />
+        <div className="flex   ">
+          <Link
+            href="
+          "
+            className=" mr-5"
+          >
+            <FaGithubAlt size={40} />
           </Link>
-          <Link href="/" className="text-xl">
-            <FaGithubAlt />
+          <Link href=" ">
+            <FaLinkedinIn size={40} />
           </Link>
         </div>
       </div>

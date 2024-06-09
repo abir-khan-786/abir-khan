@@ -17,7 +17,7 @@ const Hero = () => {
           className="  hero-image "
         />
         <div>
-          <h1 className="text-5xl font-bold">
+          <h1 className="text-2xl md:text-5xl font-bold">
             {' '}
             <span className=" animate-pulse">👋</span> Hello I&apos;m Abir Khan
           </h1>
@@ -40,8 +40,8 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="page main-header  flex justify-center items-center  ">
-        <main className="animationcontainer w-full  flex justify-between items-center">
+      <div className="page  main-header   flex justify-center items-center  ">
+        <main className="animationcontainer   w-full flex justify-between items-center">
           <div className="item   ">
             <i className="loader --2"></i>
           </div>
