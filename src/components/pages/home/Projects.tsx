@@ -2,8 +2,11 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
-import { FaLink } from 'react-icons/fa'
-import { FaGithub } from 'react-icons/fa6'
+import { FaHome, FaLink } from 'react-icons/fa'
+import { FaBabyCarriage, FaGithub } from 'react-icons/fa6'
+
+import healthub from '../../images/healthub.png'
+import Link from 'next/link'
 
 const Projects = () => {
   type Project = {
@@ -11,7 +14,7 @@ const Projects = () => {
     name: string
     description: string
     tech: string[]
-    image: string
+    image: any
     item: string
     live: string
     github: string
@@ -20,15 +23,15 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      name: 'University Management System',
+      name: 'Healthub Ai MERN Stack  Web App',
       description:
         ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem illum debitis fugiat eos, ad ipsam ipsa molestiae dicta. Doloribus pariatur impedit explicabo at unde similique ea ullam perferendis recusandae laudantium.',
-      tech: ['React', 'Node', 'Express', 'MongoDB'],
-      image:
-        'https://img.freepik.com/free-vector/construction-landing-page_23-2148181047.jpg?t=st=1715319403~exp=1715323003~hmac=42b8aa0a773e7b2d13b7e1bf9b15b5f8dfb22c0ab5a453908c836011592ed5c0&w=826',
-      live: 'https://github.com',
-      github: 'https://github.com',
-      item: 'App Development',
+      tech: ['Next js', 'Node', 'Express', 'MongoDB'],
+      image: healthub,
+
+      live: 'https://healt-hub-client.vercel.app/',
+      github: 'https://github.com/abir-khan-786/healtHub-client',
+      item: 'web development',
     },
     {
       id: 2,
@@ -52,7 +55,7 @@ const Projects = () => {
 
       live: 'https://github.com',
       github: 'https://github.com',
-      item: 'Web development',
+      item: 'web development',
     },
     {
       id: 3,
@@ -65,7 +68,7 @@ const Projects = () => {
         'https://img.freepik.com/free-vector/construction-landing-page_23-2148181047.jpg?t=st=1715319403~exp=1715323003~hmac=42b8aa0a773e7b2d13b7e1bf9b15b5f8dfb22c0ab5a453908c836011592ed5c0&w=826',
       live: 'https://github.com',
       github: 'https://github.com',
-      item: 'Web development',
+      item: 'web development',
     },
     {
       id: 4,
@@ -90,19 +93,35 @@ const Projects = () => {
         'https://img.freepik.com/free-vector/construction-landing-page_23-2148181047.jpg?t=st=1715319403~exp=1715323003~hmac=42b8aa0a773e7b2d13b7e1bf9b15b5f8dfb22c0ab5a453908c836011592ed5c0&w=826',
       live: 'https://github.com',
       github: 'https://github.com',
-      item: 'Web development',
+      item: 'web development',
     },
   ]
 
-  const [filter, setFilter] = useState('All')
+  const [filter, setFilter] = useState('all')
 
   const filterProjects = (item: string) => {
     setFilter(item)
   }
 
   const filteredProjects = projects.filter(
-    (project) => project.item === filter || filter === 'All'
+    (project) => project.item === filter || filter === 'all'
   )
+  if (!filteredProjects.length)
+    return (
+      <div>
+        <h1 className="text-center text-2xl">
+          No project found
+          <span role="img" aria-label="sad">
+            😢
+          </span>
+        </h1>
+        <div className="text-center  justify-center flex items-center flex-row">
+          <Link href="/" className="btn my-4 btn-secondary">
+            Home Pages <FaHome size={20} />
+          </Link>
+        </div>
+      </div>
+    )
 
   const active = ' bg-gradient-to-bl     to-emerald-600  from-blue-500'
 
@@ -118,9 +137,9 @@ const Projects = () => {
             <li className="  ">
               <a
                 className={`   btn btn-ghost btn-xs md:w-36      mr-2 ${
-                  filter === 'All' ? active : ''
+                  filter === 'all' ? active : ''
                 }`}
-                onClick={() => filterProjects('All')}
+                onClick={() => filterProjects('all')}
               >
                 All
               </a>
@@ -128,9 +147,9 @@ const Projects = () => {
             <li>
               <a
                 className={`     btn btn-ghost btn-xs md:w-36    mr-2 ${
-                  filter === 'App Development' ? active : ''
+                  filter === 'app development' ? active : ''
                 }`}
-                onClick={() => filterProjects('App Development')}
+                onClick={() => filterProjects('app development')}
               >
                 App Development
               </a>
@@ -138,9 +157,9 @@ const Projects = () => {
             <li>
               <a
                 className={`    btn btn-ghost btn-xs md:w-36     mr-2 ${
-                  filter === 'Web development' ? active : ''
+                  filter === 'web development' ? active : ''
                 }`}
-                onClick={() => filterProjects('Web development')}
+                onClick={() => filterProjects('web development')}
               >
                 Web development
               </a>

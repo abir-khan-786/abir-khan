@@ -66,19 +66,52 @@ const ResumePage = () => {
           <h2 className="text-2xl font-bold my-4">Projects</h2>
           <div>
             <h2 className="my-1  font-semibold">
-              University Managment Backend
+              Health Hub: AI-Powered Disease Detection and Recommendation System
             </h2>
             <h2>Duration [may-2023 - april-2024]</h2>
             <h2 className="my-2">
               <ul className="  list-inside  ">
-                <li className=" list-disc ">User can login and register</li>
-                <li className=" list-disc ">all handel Admin</li>
-                <li className=" list-disc ">user is fuking gay</li>
-                <li className=" list-disc ">User can login and register</li>
+                <li className=" list-disc ">
+                  <strong> Symptom Checker:</strong>
+                  Users input their symptoms into the application. The AI model
+                  processes the symptoms to identify potential diseases. The
+                  system is designed to handle common ailments such as colds,
+                  flu, allergies, and more serious conditions like diabetes or
+                  hypertension
+                </li>
+                <li className=" list-disc ">
+                  <strong> Doctor Recommendation:</strong>
+                  Based on the predicted disease, the application recommends
+                  specialized doctors nearby. Users can view detailed profiles,
+                  including qualifications, experience, and patient reviews.
+                  Integration with a booking system allows users to schedule
+                  appointments directly through the platform.
+                </li>
+                <li className=" list-disc ">
+                  <strong> Medicine Suggestion:</strong>
+                  The application suggests over-the-counter medicines for mild
+                  conditions. For serious conditions, it advises consulting a
+                  doctor for prescription medications. Safety warnings and
+                  dosage information are provided to ensure responsible use
+                </li>
+                <li className=" list-disc ">
+                  <strong> User Profiles:</strong>
+                  Users can create profiles to track their health history,
+                  symptoms, and consultations. The application offers
+                  personalized insights and reminders for follow-up appointments
+                  or regular check-ups.
+                </li>
+                <li className=" list-disc ">
+                  <strong> User Data Security:</strong>
+                  The application employs robust encryption methods to ensure
+                  the confidentiality and security of user data. Users can
+                  choose to anonymize their data if they prefer not to store
+                  personal information.
+                </li>
               </ul>
             </h2>
             <div className="my-2">
-              <h1>Tacnology</h1>
+              <h1 className=" font-bold text-xl py-2">Tacnology</h1>
               <p>
                 <strong>Fontend</strong>: React, Redux, Tailwind CSS, Material
                 UI, Styled Components, JavaScript, HTML, CSS <br />{' '}
@@ -164,8 +197,8 @@ const ResumePage = () => {
         <div className="my-8">
           <h2 className="text-2xl font-bold my-4">Education</h2>
           <h4>
-            <strong>Bachelor of Science in Computer Science</strong> <br />
-            <strong>University of Dhaka</strong> <br />
+            <strong>Bachelor of Social Work</strong> <br />
+            <strong>National University of Bangladesh</strong> <br />
             <strong>Duration:</strong> 2018-2022
           </h4>
         </div>
